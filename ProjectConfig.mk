@@ -22,7 +22,7 @@ CUSTOM_HAL_COMBO = mt6797
 #config camera 
 CUSTOM_HAL_EEPROM = dummy_eeprom
 CUSTOM_HAL_FLASHLIGHT = dummy_flashlight
-CUSTOM_HAL_IMGSENSOR = imx258_mipi_raw s5k5e8yx_main_mipi_raw s5k5e8yx_sub_mipi_raw
+CUSTOM_HAL_IMGSENSOR = imx258_mipi_raw s5k5e8yx_mipi_raw
 CUSTOM_HAL_LENS = lc898214af lc898212xdaf dummy_lens
 CUSTOM_HAL_MAIN2_IMGSENSOR = s5k5e8yx_main_mipi_raw
 CUSTOM_HAL_MAIN_BACKUP_IMGSENSOR =
@@ -58,7 +58,7 @@ CUSTOM_KERNEL_HEADSET = accdet
 ##LCSH MOD by ligang  20160201
 CUSTOM_KERNEL_HUMIDITY = no
 #LCSH MOD by dingyin  20160117
-CUSTOM_KERNEL_IMGSENSOR = imx258_mipi_raw s5k5e8yx_mipi_raw s5k5e8yx_mipi_raw 
+CUSTOM_KERNEL_IMGSENSOR = imx258_mipi_raw s5k5e8yx_mipi_raw
 CUSTOM_KERNEL_IN_POCKET_SENSOR = no
 CUSTOM_KERNEL_KPD = kpd
 CUSTOM_KERNEL_LEDS = mt65xx
