@@ -17,9 +17,23 @@
 <!-- This is the standard set of features for an camera. -->
 <permissions>
     <feature name="android.hardware.camera" />
-    <!-- unmark following line if the hardware supports autofocus -->
     <feature name="android.hardware.camera.autofocus" />
     <feature name="android.hardware.camera.flash" />
-    <feature name="android.hardware.camera.front" />
+    <!-- 
+	 =======================================================================
+	  Currently not supported without O-film S5K5E8 5MP compatible drivers 
+          for Redmi Note 4 MTK (codename "nikel").
+	 
+	  Driver name: s5k5e8yxb6mipiraw (aka. s5k5e8yx_b6_mipi_raw)
+          Vendor: Samsung
+          Manufacturer: O-film
+    
+          If you found this driver (HALs and modules for MTK-based kernels),
+          uncomment line below and send issue to:
+          https://github.com/SnowdroidReborn/mtk-device-trees/
+	 =======================================================================
+    
+	 <feature name="android.hardware.camera.front" />
+    !-->
     <feature name="android.hardware.camera.any" />
 </permissions>

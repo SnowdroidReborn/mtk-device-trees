@@ -51,6 +51,10 @@ ifneq ($(strip $(CUSTOM_KERNEL_MAGNETOMETER)),)
   PRODUCT_COPY_FILES += frameworks/native/data/etc/android.hardware.sensor.compass.xml:system/etc/permissions/android.hardware.sensor.compass.xml
 endif
 
+ifneq ($(strip $(CUSTOM_KERNEL_FINGERPRINT)),)
+  PRODUCT_COPY_FILES += device/xiaomi/nikel/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml
+endif
+
 ifneq ($(strip $(CUSTOM_KERNEL_ALSPS)),)
   PRODUCT_COPY_FILES += frameworks/native/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml
   PRODUCT_COPY_FILES += frameworks/native/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml
@@ -184,18 +188,6 @@ ifdef OPTR_SPEC_SEG_DEF
     DEVICE_PACKAGE_OVERLAYS += device/mediatek/common/overlay/operator/$(OPTR)/$(SPEC)/$(SEG)
   endif
 endif
-ifneq (yes,$(strip $(MTK_TABLET_PLATFORM)))
-  ifeq (480,$(strip $(LCM_WIDTH)))
-    ifeq (854,$(strip $(LCM_HEIGHT)))
-      DEVICE_PACKAGE_OVERLAYS += device/mediatek/common/overlay/FWVGA
-    endif
-  endif
-  ifeq (540,$(strip $(LCM_WIDTH)))
-    ifeq (960,$(strip $(LCM_HEIGHT)))
-      DEVICE_PACKAGE_OVERLAYS += device/mediatek/common/overlay/qHD
-    endif
-  endif
-endif
 ifeq (yes,$(strip $(MTK_GMO_ROM_OPTIMIZE)))
   DEVICE_PACKAGE_OVERLAYS += device/mediatek/common/overlay/slim_rom
 endif
@@ -211,7 +203,7 @@ endif
 ifneq ($(MTK_AUDIO_TUNING_TOOL_VERSION),)
   ifneq ($(strip $(MTK_AUDIO_TUNING_TOOL_VERSION)),V1)
     # adjust mtk codec lineout gain during speaker playback
-    MTK_AUDIO_PARAM_DIR_LIST += device/xiaomi/k15tb_a/audio_param/
+    MTK_AUDIO_PARAM_DIR_LIST += device/xiaomi/nikel/audio_param/
   endif
 endif
 # inherit 6752 platform
@@ -232,3 +224,15 @@ endif
 ifeq ($(NB_FP_AFS_SUPPORT),yes)
 	PRODUCT_PACKAGES += FprintMACal
 endif
+
+# exFAT
+PRODUCT_PACKAGES += \
+    mount.exfat \
+    fsck.exfat \
+    mkfs.exfat
+    
+# NTFS
+PRODUCT_PACKAGES += \
+    fsck.ntfs \
+    mkfs.ntfs \
+    mount.ntfs
