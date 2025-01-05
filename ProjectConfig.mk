@@ -22,12 +22,12 @@ CUSTOM_HAL_COMBO = mt6797
 #config camera 
 CUSTOM_HAL_EEPROM = dummy_eeprom
 CUSTOM_HAL_FLASHLIGHT = dummy_flashlight
-CUSTOM_HAL_IMGSENSOR = imx258_mipi_raw s5k3l8_mipi_raw s5k5e8yx_mipi_raw
+CUSTOM_HAL_IMGSENSOR = imx258_mipi_raw s5k3l8_mipi_raw s5k5e8yx_mipi_raw s5k3m2_mipi_raw s5k5e2ya_mipi_raw 
 CUSTOM_HAL_LENS = lc898214af lc898212xdaf dummy_lens
-CUSTOM_HAL_MAIN2_IMGSENSOR = s5k5e8yx_main_mipi_raw
+CUSTOM_HAL_MAIN2_IMGSENSOR = s5k5e8yx_main_mipi_raw s5k5e8yx_mipi_raw s5k5e2ya_mipi_raw 
 CUSTOM_HAL_MAIN_BACKUP_IMGSENSOR =
 CUSTOM_HAL_MAIN_BACKUP_LENS = 
-CUSTOM_HAL_MAIN_IMGSENSOR = imx258_mipi_raw
+CUSTOM_HAL_MAIN_IMGSENSOR = imx258_mipi_raw s5k3m2_mipi_raw s5k3l8_mipi_raw
 CUSTOM_HAL_MAIN_LENS = lc898214af lc898212xdaf
 #LCSH MOD by dingyin  20160117 end
 CUSTOM_HAL_MSENSORLIB = mmc328x akm8975 ami304 yamaha530 mag3110 akmd8963 bmm050 mc6420 mmc3416x s62xd lsm303md hscdtd006 qmc5983 akmd09911 mc64xx bmm056 mc41xx akmd09912
@@ -58,7 +58,7 @@ CUSTOM_KERNEL_HEADSET = accdet
 ##LCSH MOD by ligang  20160201
 CUSTOM_KERNEL_HUMIDITY = no
 #LCSH MOD by dingyin  20160117
-CUSTOM_KERNEL_IMGSENSOR = imx258_mipi_raw s5k3l8_mipi_raw s5k5e8yx_mipi_raw s5k5e8yx_b6_mipi_raw
+CUSTOM_KERNEL_IMGSENSOR = imx258_mipi_raw s5k3l8_mipi_raw s5k5e8yx_mipi_raw s5k5e8yx_b6_mipi_raw s5k5e2ya_mipi_raw s5k3m2_mipi_raw
 CUSTOM_KERNEL_IN_POCKET_SENSOR = no
 CUSTOM_KERNEL_KPD = kpd
 CUSTOM_KERNEL_LEDS = mt65xx
@@ -66,13 +66,13 @@ CUSTOM_KERNEL_LEDS = mt65xx
 #config camera 
 CUSTOM_KERNEL_LENS = lc898214af lc898212xdaf dummy_lens
 CUSTOM_KERNEL_MAGNETOMETER = yes
-CUSTOM_KERNEL_MAIN2_BACKUP_IMGSENSOR = s5k5e8yx_mipi_raw
+CUSTOM_KERNEL_MAIN2_BACKUP_IMGSENSOR = s5k5e8yx_mipi_raw s5k5e8yx_b6_mipi_raw s5k5e2ya_mipi_raw s5k3m2_mipi_raw
 #LCSH MOD by dingyin  20160117  start
 #config camera 
 #CUSTOM_KERNEL_MAIN2_IMGSENSOR = s5k5e8yx_mipi_raw
 CUSTOM_KERNEL_MAIN_BACKUP_IMGSENSOR =
 CUSTOM_KERNEL_MAIN_BACKUP_LENS = 
-CUSTOM_KERNEL_MAIN_IMGSENSOR = imx258_mipi_raw
+CUSTOM_KERNEL_MAIN_IMGSENSOR = imx258_mipi_raw s5k3l8_mipi_raw
 CUSTOM_KERNEL_MAIN_LENS = lc898214af lc898212xdaf
 #LCSH MOD by dingyin  20160117  end
 # #LCSH MOD by ligang  20160201
@@ -89,7 +89,7 @@ CUSTOM_KERNEL_STEP_COUNTER = yes
 #config camera 
 CUSTOM_KERNEL_SUB_BACKUP_IMGSENSOR =
 CUSTOM_KERNEL_SUB_BACKUP_LENS = 
-CUSTOM_KERNEL_SUB_IMGSENSOR = s5k5e8yx_mipi_raw
+CUSTOM_KERNEL_SUB_IMGSENSOR = s5k5e8yx_mipi_raw s5k5e8yx_b6_mipi_raw s5k5e2ya_mipi_raw
 CUSTOM_KERNEL_SUB_LENS = dummy_lens
 #LCSH MOD by dingyin  20160117 end
 # #LCSH MOD by ligang  20160201
@@ -411,7 +411,7 @@ MTK_FM_TX_SUPPORT = no
 MTK_FORCE_CLUSTER1 = no
 MTK_FOTA_ENTRY = no
 MTK_FOTA_RELEASE = no
-MTK_FOTA_SUPPORT = no
+MTK_FOTA_SUPPORT = yes
 MTK_FSCK_MSDOS_MTK = no
 MTK_FSCK_TUNE = no
 MTK_FUSED_LOCATION_SUPPORT = no
