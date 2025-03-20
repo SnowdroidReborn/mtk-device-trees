@@ -236,3 +236,8 @@ PRODUCT_PACKAGES += \
     fsck.ntfs \
     mkfs.ntfs \
     mount.ntfs
+    
+# Shims (fake vendor libraries)
+
+PRODUCT_PACKAGES += \
+    libshims_clearmotion
