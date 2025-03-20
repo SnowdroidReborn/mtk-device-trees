@@ -17,7 +17,6 @@
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
-LOCAL_SRC_FILES := libClearMotionFW.c
 LOCAL_MODULE := libshims_clearmotion
 LOCAL_MODULE_TAGS := optional
 LOCAL_SHARED_LIBRARIES_32 = libui libion libdpframework librrc libc++

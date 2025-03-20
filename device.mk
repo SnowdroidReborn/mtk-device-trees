@@ -7,7 +7,7 @@ include device/xiaomi/$(MTK_TARGET_PROJECT)/ProjectConfig.mk
 # PRODUCT_COPY_FILES overwrite
 # Please add flavor project's PRODUCT_COPY_FILES here.
 # It will overwrite base project's PRODUCT_COPY_FILES.
-PRODUCT_COPY_FILES += device/xiaomi/$(MTK_TARGET_PROJECT)/init.project.rc:root/init.project.rc
+PRODUCT_COPY_FILES += device/xiaomi/$(MTK_TARGET_PROJECT)/rootdir/init.project.rc:root/init.project.rc
 
 # overlay has priorities. high <-> low.
 DEVICE_PACKAGE_OVERLAYS += device/xiaomi/$(MTK_TARGET_PROJECT)/overlay
@@ -17,9 +17,9 @@ DEVICE_PACKAGE_OVERLAYS += device/xiaomi/$(MTK_TARGET_PROJECT)/overlay
 # PRODUCT_COPY_FILES += device/xiaomi/nikel/egl.cfg:system/lib/egl/egl.cfg
 # PRODUCT_COPY_FILES += device/xiaomi/nikel/ueventd.mt6797.rc:root/ueventd.mt6797.rc
 
-PRODUCT_COPY_FILES += device/xiaomi/nikel/factory_init.project.rc:root/factory_init.project.rc
-PRODUCT_COPY_FILES += device/xiaomi/nikel/init.project.rc:root/init.project.rc
-PRODUCT_COPY_FILES += device/xiaomi/nikel/meta_init.project.rc:root/meta_init.project.rc
+PRODUCT_COPY_FILES += device/xiaomi/nikel/rootdir/factory_init.project.rc:root/factory_init.project.rc
+PRODUCT_COPY_FILES += device/xiaomi/nikel/rootdir/init.project.rc:root/init.project.rc
+PRODUCT_COPY_FILES += device/xiaomi/nikel/rootdir/meta_init.project.rc:root/meta_init.project.rc
 
 ifeq ($(MTK_SMARTBOOK_SUPPORT),yes)
 PRODUCT_COPY_FILES += device/xiaomi/nikel/sbk-kpd.kl:system/usr/keylayout/sbk-kpd.kl \
@@ -52,7 +52,7 @@ ifneq ($(strip $(CUSTOM_KERNEL_MAGNETOMETER)),)
 endif
 
 ifneq ($(strip $(CUSTOM_KERNEL_FINGERPRINT)),)
-  PRODUCT_COPY_FILES += device/xiaomi/nikel/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml
+  PRODUCT_COPY_FILES += device/xiaomi/nikel/permissions/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml
 endif
 
 ifneq ($(strip $(CUSTOM_KERNEL_ALSPS)),)
@@ -105,7 +105,7 @@ endif
 PRODUCT_COPY_FILES += frameworks/av/media/libeffects/data/audio_effects.conf:system/etc/audio_effects.conf
 
 # alps/mediatek/config/$project
-PRODUCT_COPY_FILES += device/xiaomi/nikel/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
+PRODUCT_COPY_FILES += device/xiaomi/nikel/permissions/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
 
 # alps/mediatek/external/sip/
 ifneq ($(MTK_BASIC_PACKAGE),yes)
@@ -160,13 +160,13 @@ PRODUCT_COPY_FILES += device/mediatek/mt6797/ACCDET.kl:system/usr/keylayout/ACCD
 PRODUCT_COPY_FILES += device/xiaomi/nikel/mtk-kpd.kl:system/usr/keylayout/mtk-kpd.kl
 
 # Microphone
-PRODUCT_COPY_FILES += device/xiaomi/nikel/android.hardware.microphone.xml:system/etc/permissions/android.hardware.microphone.xml
+PRODUCT_COPY_FILES += device/xiaomi/nikel/permissions/android.hardware.microphone.xml:system/etc/permissions/android.hardware.microphone.xml
 
 # Camera
-PRODUCT_COPY_FILES += device/xiaomi/nikel/android.hardware.camera.xml:system/etc/permissions/android.hardware.camera.xml
+PRODUCT_COPY_FILES += device/xiaomi/nikel/permissions/android.hardware.camera.xml:system/etc/permissions/android.hardware.camera.xml
 
 # Audio Policy
-PRODUCT_COPY_FILES += device/xiaomi/nikel/audio_policy.conf:system/etc/audio_policy.conf
+PRODUCT_COPY_FILES += device/xiaomi/nikel/permissions/audio_policy.conf:system/etc/audio_policy.conf
 
 
 #Images for LCD test in factory mode
