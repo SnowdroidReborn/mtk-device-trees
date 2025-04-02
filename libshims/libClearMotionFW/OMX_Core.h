@@ -33,6 +33,9 @@
  *      with the component.  No error messages are allowed that are
  *      not defined.
  */
+
+typedef signed long OMX_S32;
+
 typedef enum OMX_ERRORTYPE
 {
   OMX_ErrorNone = 0,
