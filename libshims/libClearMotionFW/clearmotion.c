@@ -24,10 +24,10 @@
 
 #include "clearmotion.h"
 
-public OMX_ERRORTYPE _ZN3MJC12GetParameterE13MJC_PARAMTYPEPv() {
+OMX_ERRORTYPE _ZN3MJC12GetParameterE13MJC_PARAMTYPEPv() {
   return OMX_ErrorNone;
-};
+}
 
-public OMX_ERRORTYPE MJCGetParameter() {
+OMX_ERRORTYPE MJCGetParameter() {
   return _ZN3MJC12GetParameterE13MJC_PARAMTYPEPv();
 }
