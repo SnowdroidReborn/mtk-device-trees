@@ -225,6 +225,12 @@ ifeq ($(NB_FP_AFS_SUPPORT),yes)
 	PRODUCT_PACKAGES += FprintMACal
 endif
 
+ifeq ($(MTK_FINGERPRINT_SUPPORT),yes)
+  PRODUCT_PACKAGES += fingerprintd \
+                      fingerprint.mt6797 \
+                      libgf_hal
+endif
+
 # exFAT
 PRODUCT_PACKAGES += \
     mount.exfat \
